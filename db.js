@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
-
-mongoose.connect(
-  "mongodb+srv://ruturajchondekar:ejhNcAMmMc5GHZHo@cluster0.qxfejac.mongodb.net/paytmApp"
-);
+const { DB_URL } = require("./backend/config");
+mongoose.connect(DB_URL);
 
 const UserSchema = new mongoose.Schema({
   username: {
